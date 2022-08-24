@@ -10,10 +10,12 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 68px;
 
         @include min.breakpoint(tablet) {
             flex-direction: row;
             justify-content: space-between;
+            padding-bottom: unset;
         }
 
         .footerNav {
@@ -52,6 +54,7 @@ footer {
                     a {
                         color: var.$text-white;
                         padding: .5rem 1rem;  
+                        font-weight: bold;
                     }
 
                     &:last-of-type {
@@ -124,5 +127,18 @@ footer {
             
         }
 
+    }
+
+    .footerCopyright {
+        background-color: var.$bg-white;
+        height: 36px;
+        text-align: right;
+        
+        .copyRight {
+            font: normal normal bold 12px/20px "YuGothic";
+            padding-top: 12px;
+            padding-bottom: 12px;
+            line-height: 1;
+        }
     }
 }

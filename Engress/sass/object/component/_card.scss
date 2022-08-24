@@ -80,7 +80,7 @@
                 }
 
                 @include min.breakpoint(pc) {
-                    margin-bottom: 20px;
+                    margin-bottom: 39px;
                 }
             }
 
@@ -325,7 +325,6 @@
                 font-size: 0.875rem;
 
                 @include min.breakpoint(tablet) {
-                    font-size: 1rem;
                     padding: .5rem 1rem;
                 }
 
@@ -341,7 +340,7 @@
 
             .blogLink {
                 display: block;
-                font-weight: bold;
+                font: normal normal bold 16px/27px "YuGothic";
 
                 &:hover {
                     text-decoration: underline;

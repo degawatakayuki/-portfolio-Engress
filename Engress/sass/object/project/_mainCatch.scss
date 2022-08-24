@@ -59,10 +59,10 @@
 
                 & > p {
                     margin-bottom: 15px;
-                    font: normal normal bold 16px/34px "YuGothic";
+                    font: normal normal 500 16px/28px "YuGothic";
 
                     @include min.breakpoint(tablet) {
-                        font: normal normal bold 18px/39px "YuGothic";
+                        font: normal normal 500 18px/31px "YuGothic";
                     }
                     
                 }

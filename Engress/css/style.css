@@ -231,6 +231,7 @@ h3 {
   .headerContainer .headerLeft .headerNav-pc ul li > a {
     padding: 0.2rem 0.5rem;
     line-height: 2;
+    font: normal normal bold 16px/29px "YuGothic";
   }
   .headerContainer .headerLeft .headerNav-pc ul a {
     align-self: center;
@@ -279,11 +280,13 @@ footer .footerContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 68px;
 }
 @media (min-width: 641px) {
   footer .footerContainer {
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: unset;
   }
 }
 footer .footerContainer .footerNav {
@@ -323,6 +326,7 @@ footer .footerContainer .footerNav ul li:nth-of-type(odd) {
 footer .footerContainer .footerNav ul li a {
   color: #fff;
   padding: 0.5rem 1rem;
+  font-weight: bold;
 }
 @media (min-width: 980px) {
   footer .footerContainer .footerNav ul li:last-of-type {
@@ -379,6 +383,17 @@ footer .footerContainer .footerRight .footerContent .footerTel img {
 footer .footerContainer .footerRight .footerContent .footerTime {
   color: #fff;
   font: normal normal 500 12px/20px "YuGothic";
+}
+footer .footerCopyright {
+  background-color: #fff;
+  height: 36px;
+  text-align: right;
+}
+footer .footerCopyright .copyRight {
+  font: normal normal bold 12px/20px "YuGothic";
+  padding-top: 12px;
+  padding-bottom: 12px;
+  line-height: 1;
 }
 
 .c-headerButton {
@@ -642,7 +657,7 @@ footer .footerContainer .footerRight .footerContent .footerTime {
 }
 @media (min-width: 980px) {
   .c-card.advantage .advantageContent .contentTitle {
-    margin-bottom: 20px;
+    margin-bottom: 39px;
   }
 }
 .c-card.advantage .advantageContent .text {
@@ -873,7 +888,6 @@ footer .footerContainer .footerRight .footerContent .footerTime {
 }
 @media (min-width: 641px) {
   .c-card.blogContents picture .category {
-    font-size: 1rem;
     padding: 0.5rem 1rem;
   }
 }
@@ -886,7 +900,7 @@ footer .footerContainer .footerRight .footerContent .footerTime {
 }
 .c-card.blogContents .blogContent .blogLink {
   display: block;
-  font-weight: bold;
+  font: normal normal bold 16px/27px "YuGothic";
 }
 .c-card.blogContents .blogContent .blogLink:hover {
   text-decoration: underline;
@@ -916,6 +930,7 @@ footer .footerContainer .footerRight .footerContent .footerTime {
 .c-accordion .accordion__item .accordion__content, .c-accordion .accordion__item .accordion__title {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-weight: 500;
 }
 .c-accordion .accordion__item .accordion__title {
   position: relative;
@@ -1054,11 +1069,11 @@ footer .footerContainer .footerRight .footerContent .footerTime {
 }
 .p-mainCatch .catchContainer .catchBlock .catchContents > p {
   margin-bottom: 15px;
-  font: normal normal bold 16px/34px "YuGothic";
+  font: normal normal 500 16px/28px "YuGothic";
 }
 @media (min-width: 641px) {
   .p-mainCatch .catchContainer .catchBlock .catchContents > p {
-    font: normal normal bold 18px/39px "YuGothic";
+    font: normal normal 500 18px/31px "YuGothic";
   }
 }
 
