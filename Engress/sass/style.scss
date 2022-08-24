@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@use "foundation/_mixins";
+@use "foundation/_variables";
+@use "foundation/_reset.scss"; 
+@use "foundation/_base.scss";
+
+@use "layout/_header.scss";
+@use "layout/_footer.scss";
+
+@use "object/component/button";
+@use "object/component/hamburger";
+@use "object/component/card";
+@use "object/component/accordion";
+
+@use "object/project/mainVisual";
+@use "object/project/mainCatch";
+@use "object/project/advantage";
+@use "object/project/successStory";
+@use "object/project/useFlow";
+@use "object/project/question";
+@use "object/project/sns";
+
+/* @use "object/utility/spacing"; */
+

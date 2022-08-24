@@ -1,0 +1,358 @@
+@use  "../../foundation/variables" as var;
+@use  "../../foundation/mixins" as min;
+
+.c-card {
+    //会社の強み
+    &.advantage {
+        display: block;
+        position: relative;  
+        width: 100%;
+        height: 100%;
+
+        @include min.breakpoint(tablet) {
+            display: flex;
+        }
+
+        picture {
+            width: 100%;
+            height: 100%;
+            flex: 0 0 40%;
+
+            @include min.breakpoint(tablet) {
+                /* width: 40%; */
+                order: 1;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+
+                @include min.breakpoint(tablet) {
+                    height: 280px;
+                }
+
+                @include min.breakpoint(pc) {
+                    height: 320px;
+                }
+            }
+        }
+
+        .advantageContent {
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            padding: 30px 20px;
+            height: auto;
+
+            @include min.breakpoint(tablet) {
+                position: unset;
+                width: 55%;
+                margin-right: 5%;
+                padding: unset;
+            }
+
+            .tag {
+                display: inline-block;
+                padding: 5px 15px;
+                color: var.$text-white;
+                background-color: var.$bg-accent;
+                font: normal normal 500 12px/20px "YuGothic";
+                margin-bottom: 20px;
+
+                @include min.breakpoint(tablet) {
+                    padding: 8px 20px;
+                    margin-bottom: 15px;
+                }
+
+                @include min.breakpoint(pc) {
+                    margin-bottom: 30px;
+                    padding: 10px 25px;
+                }
+            }
+
+            .contentTitle {
+                color: var.$text-white;
+                margin-bottom: 40px;
+
+                @include min.breakpoint(tablet) {
+                    margin-bottom: 15px;
+                    color: var.$text-main;
+                }
+
+                @include min.breakpoint(pc) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .text {
+                color: var.$text-white;
+                font-weight: 500;
+
+                @include min.breakpoint(tablet) {
+                    color: var.$text-main;
+                }
+            }
+            
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+
+            .advantageContent {
+                @include min.breakpoint(tablet) {
+                    margin-left: 5%;
+                    margin-right: unset;
+                }
+            }
+
+            
+        }
+    }
+    //成功例
+    &.success {
+        margin-bottom: 50px;
+
+        @include min.breakpoint(tablet) {
+            width: 32%;
+        }
+        
+        .comment {
+            color: var.$text-white;
+            font-weight: bold;
+            line-height: 1.8;
+            margin-bottom: 10px;
+
+            @include min.breakpoint(tablet) {
+                height: 100px;
+            }
+
+            @include min.breakpoint(pc) {
+                height: 60px;
+            }
+        }
+
+        .successBlock {
+            display: block;
+            width: 100%;
+            height: 150px;
+            background-color: var.$bg-white;
+            position: relative;
+
+            @include min.breakpoint(tablet) {
+                height: 170px;
+            }
+
+            @include min.breakpoint(pc) {
+                height: 200px;
+            }
+
+            img {
+                position: absolute;
+                left: 8%;
+                bottom: 0;
+                width: 130px;
+                height: 130px;
+
+                @include min.breakpoint(tablet) {
+                    width: 153px;
+                    height: 156px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                @include min.breakpoint(pc) {
+                    width: 183px;
+                    height: 186px;
+                }
+            }
+        }
+
+        .successContent {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+
+            @include min.breakpoint(tablet) {
+
+                top:180px;
+                left: 0;
+                right: 0;
+            }
+
+            @include min.breakpoint(pc) {
+                top: 210px;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+
+            .position, .name, .score {
+                display: block;
+                font-weight: 500;
+                line-height: 1.5;
+                background: #F8F8F8;
+                margin-bottom: 5px;
+                padding: 5px 15px;
+
+                @include min.breakpoint(pc) {
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    
+                }
+            }
+
+            .position {
+                @include min.breakpoint(pc) {
+                    width: 30%;
+                    margin-right: 10%;
+                }
+            }
+
+            .name {
+                @include min.breakpoint(pc) {
+                    width: 60%;
+                }
+            }
+
+            .score {
+                @include min.breakpoint(pc) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    //ご利用の流れ
+    &.useFlow {
+        display: flex;
+        height: 100px;
+        position: relative;
+        background-color: #F8F8F8;
+        margin-bottom: 8px;
+
+        @include min.breakpoint(tablet) {
+            width: 100%;
+        }
+
+        .numberBlock {
+            display: block;
+            flex: 0 0 15%;
+            height: 100%;
+            text-align: center;
+            background-color: var.$bg-accent;
+            color: var.$text-white;
+            font-weight: bold;
+            padding-top: 42px;
+            padding-bottom: 42px;
+            line-height: 1;
+        }
+
+        .flowContent {
+            padding: 5px 20px;
+
+            @include min.breakpoint(tablet) {
+                display: flex;
+                width: 100%;
+            }
+
+            .flowTitle {
+                font: normal normal bold 18px/40px "YuGothic";
+
+                @include min.breakpoint(tablet) {
+                    border-right: 1px solid #C3C3C3;
+                }
+                
+                @include min.breakpoint(tablet) {
+                    border-right: 1px solid #C3C3C3;
+                    display: inline-block;
+                    
+                    align-self: center;
+                    flex: 0 0 200px;
+                    line-height: 1;
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                }
+            }
+
+            .flowText {
+                font-weight: 500;
+
+                @include min.breakpoint(tablet) {
+                    align-self: center;
+                    flex: 1 1 100%;
+                    margin-left: 50px;
+                }
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: unset;
+        }
+    }
+
+    //ブログ
+    &.blogContents {
+        display: flex;
+        margin-bottom: 31px;
+
+        &:last-of-type {
+            margin-bottom: unset;
+        }
+
+        picture {
+            display: block;
+            position: relative;
+            flex: 0 0 40%;
+            height: 120px;
+
+            @include min.breakpoint(tablet) {
+                height: auto;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .category {
+                display: inline-block;
+                background-color: var.$bg-main;
+                color: var.$text-white;
+                padding: .3rem .6rem;
+                position: absolute;
+                font-size: 0.875rem;
+
+                @include min.breakpoint(tablet) {
+                    font-size: 1rem;
+                    padding: .5rem 1rem;
+                }
+
+            }
+        }
+
+        .blogContent {
+            display: flex;
+            flex: 1;
+            margin-left: 3%;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .blogLink {
+                display: block;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .blogDate {
+                font-size: 0.75rem;
+                font-weight: 500;
+                margin-top: auto;
+            }
+        }
+    }
+}

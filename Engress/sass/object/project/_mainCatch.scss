@@ -1,0 +1,73 @@
+@use "../../foundation/variables" as var;
+@use "../../foundation/mixins" as min;
+
+.p-mainCatch{
+    background-color: var.$bg-main;
+    padding-top: 63px;
+    padding-bottom: 54px;
+    text-align: center;
+
+    .catchContainer {
+        
+        .catchTitle {
+            color: var.$text-white;
+            margin-bottom: 65px;
+        }
+
+        .worriesContents {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 83px;
+
+            @include min.breakpoint(tablet) {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            @include min.breakpoint(pc) {
+                width: 7      0%;
+                margin: 0 auto 83px;
+            }
+
+            .worriesText {
+                color: var.$text-white;
+                line-height: 2;
+                font: normal normal bold 18px/39px "YuGothic";
+            }
+        }
+
+        .catchBlock {
+            width: 100%;
+            background-color: var.$bg-white;
+            padding: 10px;
+
+            @include min.breakpoint(tablet) {
+                padding: 20px;
+            }
+
+            .catchContents {
+                padding: 15px 20px;
+                border: 3px solid var.$text-main;
+
+                @include min.breakpoint(tablet) {
+                    border: 5px solid var.$text-main;
+                }
+
+                & > h2 {
+                    margin-bottom: 25px;
+                }
+
+                & > p {
+                    margin-bottom: 15px;
+                    font: normal normal bold 16px/34px "YuGothic";
+
+                    @include min.breakpoint(tablet) {
+                        font: normal normal bold 18px/39px "YuGothic";
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+}
