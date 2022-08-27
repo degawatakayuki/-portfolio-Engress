@@ -12,6 +12,7 @@
 @use "object/component/hamburger";
 @use "object/component/card";
 @use "object/component/accordion";
+@use "object/component/pager";
 
 @use "object/project/mainVisual";
 @use "object/project/mainCatch";
@@ -20,6 +21,12 @@
 @use "object/project/useFlow";
 @use "object/project/question";
 @use "object/project/sns";
+@use "object/project/contact";
+@use "object/project/subVisual";
+@use "object/project/planSystem";
+@use "object/project/planChart";
+@use "object/project/blogLists";
+@use "object/project/newsLists";
 
 /* @use "object/utility/spacing"; */
 

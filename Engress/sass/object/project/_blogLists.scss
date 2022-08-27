@@ -1,0 +1,96 @@
+@use "../../foundation/variables" as var;
+@use "../../foundation/mixins" as min;
+.p-blogLists {
+    
+    margin-top: 58px;
+    margin-bottom: 109px;
+    .blogListsContainer {
+
+        .blogListsTitle {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .blogList {
+
+            .blogPost {
+                display: flex;
+                margin-bottom: 63px;
+                flex-direction: column;
+
+                @include min.breakpoint(tablet) {
+                    flex-direction: row;
+                    margin-bottom: 93px;
+                }
+                
+                &:last-of-type {
+                    margin-bottom: unset;
+                }
+
+                picture {
+                    flex: 0 0 30%;
+                    position: relative;
+                    /* margin-right: 5%; */
+                    height: 100%;
+
+                    img {
+                        width: 70%;
+                        height: 100%;
+
+                        @include min.breakpoint(tablet) {
+                            width: 100%;
+                        }
+                    }
+
+                    .category {
+                        display: block;
+                        position: absolute;
+                        z-index: 10;
+                        top:0;
+                        left: 0;
+                        color: var.$text-white;
+                        background-color: var.$bg-main;
+                        padding: .5rem 1rem;
+                    }
+                }
+
+                .postContent {
+                    margin-top: 10px;
+                    width: 95%;
+                    align-self: center;
+
+                    @include min.breakpoint(tablet) {
+                        margin-left: 5%;
+                        margin-top: unset;
+                        width: unset;
+                        align-self: unset;
+                    }
+
+                    .postDate {
+                        font: normal normal 500 14px/24px "YuGothic";
+                        margin-bottom: 10px;
+
+                        @include min.breakpoint(pc) {
+                            font: normal normal 500 16px/29px "YuGothic";
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .postTitle {
+                        font: normal normal bold 22px/34px "YuGothic";
+                        margin-bottom: 10px;
+
+                        @include min.breakpoint(pc) {
+                            font: normal normal bold 26px/39px "YuGothic";
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .postText {
+                        font: normal normal 500 16px/24px YuGothic;
+                    }
+                }
+            }
+        }
+    }
+}

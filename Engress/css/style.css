@@ -292,10 +292,17 @@ footer .footerContainer {
 footer .footerContainer .footerNav {
   margin-top: 49px;
   margin-bottom: 50px;
+  width: 100%;
+}
+@media (min-width: 641px) {
+  footer .footerContainer .footerNav {
+    width: 40%;
+  }
 }
 @media (min-width: 980px) {
   footer .footerContainer .footerNav {
     width: 60%;
+    align-self: flex-start;
   }
 }
 footer .footerContainer .footerNav ul {
@@ -340,6 +347,7 @@ footer .footerContainer .footerRight {
   footer .footerContainer .footerRight {
     margin-top: 35px;
     flex-direction: column;
+    margin-bottom: 35px;
   }
 }
 footer .footerContainer .footerRight picture {
@@ -533,6 +541,7 @@ footer .footerCopyright .copyRight {
   height: 100%;
   text-align: center;
   align-self: center;
+  background-color: #eee;
 }
 .c-hamburgerBlock-sp .spMainNav__list .spMainNav__item a {
   display: inline-block;
@@ -540,6 +549,7 @@ footer .footerCopyright .copyRight {
   height: 100%;
   padding: 1rem 120px;
   cursor: pointer;
+  font-weight: bold;
 }
 @media (min-width: 641px) {
   .c-hamburgerBlock-sp .spMainNav__list .spMainNav__item a {
@@ -813,7 +823,7 @@ footer .footerCopyright .copyRight {
   font-weight: bold;
   padding-top: 42px;
   padding-bottom: 42px;
-  line-height: 1;
+  font: normal normal bold 16px/29px "YuGothic";
 }
 .c-card.useFlow .flowContent {
   padding: 5px 20px;
@@ -884,7 +894,7 @@ footer .footerCopyright .copyRight {
   color: #fff;
   padding: 0.3rem 0.6rem;
   position: absolute;
-  font-size: 0.875rem;
+  font: normal normal 500 12px/12px "YuGothic";
 }
 @media (min-width: 641px) {
   .c-card.blogContents picture .category {
@@ -910,6 +920,97 @@ footer .footerCopyright .copyRight {
   font-weight: 500;
   margin-top: auto;
 }
+.c-card.chart {
+  display: block;
+  border: 1px solid #1B224C;
+  flex: 0 0 47%;
+  margin-right: 3%;
+  margin-top: 40px;
+}
+@media (min-width: 641px) {
+  .c-card.chart {
+    flex: 0 0 31%;
+  }
+}
+@media (min-width: 980px) {
+  .c-card.chart {
+    flex: 0 0 20%;
+  }
+}
+.c-card.chart:last-of-type {
+  margin-right: unset;
+}
+.c-card.chart .planTitle {
+  text-align: center;
+  font: normal normal bold 16px/35px "YuGothic";
+  height: 60px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  color: #fff;
+  background-color: #1B224C;
+}
+.c-card.chart .planContent {
+  text-align: center;
+  padding: 1.5rem 0.3rem;
+}
+@media (min-width: 641px) {
+  .c-card.chart .planContent {
+    padding: 2rem 1rem;
+  }
+}
+.c-card.chart .planContent .planPrice {
+  font: normal normal bold 25px/40px "YuGothic";
+  margin-bottom: 48px;
+}
+.c-card.chart .planContent .planPrice span {
+  display: block;
+  font: normal normal 500 16px/27px "YuGothic";
+}
+.c-card.chart .planContent .planRemarks {
+  font: normal normal 500 16px/27px "YuGothic";
+}
+.c-card.chart .planContent .planRemarks p {
+  margin-bottom: 10px;
+}
+@media (min-width: 641px) {
+  .c-card.chart .planContent .planRemarks p {
+    margin-bottom: 23px;
+  }
+}
+.c-card.chart .planContent .planRemarks p::before {
+  content: "\f105";
+  font: var(--fa-font-solid);
+  padding-right: 5px;
+}
+.c-card.chart .planContent .planRemarks p:last-of-type {
+  margin-bottom: unset;
+}
+.c-card.chart .planContent .planRemarks .notes::before {
+  content: "";
+}
+.c-card.chart.recommendation {
+  margin-top: 0;
+  position: relative;
+}
+.c-card.chart.recommendation .planTitle {
+  display: block;
+  background-color: #F5A623;
+  height: 100px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  width: 101%;
+  border: 1px solid #F5A623;
+}
+.c-card.chart.recommendation .planTitle span {
+  display: block;
+  color: #fff;
+  background-color: #F5A623;
+}
+.c-card.chart.recommendation .planContent {
+  margin-top: 100px;
+}
 
 .c-accordion .accordion__item {
   display: block;
@@ -930,7 +1031,7 @@ footer .footerCopyright .copyRight {
 .c-accordion .accordion__item .accordion__content, .c-accordion .accordion__item .accordion__title {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-weight: 500;
+  font: normal normal 500 16px/27px "YuGothic";
 }
 .c-accordion .accordion__item .accordion__title {
   position: relative;
@@ -971,6 +1072,13 @@ footer .footerCopyright .copyRight {
 }
 .c-accordion .accordion__item .accordion__content.is-open {
   display: block;
+}
+
+.c-pager .pagerContainer {
+  margin: 0 auto;
+}
+.c-pager .pagerContainer ul {
+  display: flex;
 }
 
 .p-mainVisual {
@@ -1292,25 +1400,27 @@ footer .footerCopyright .copyRight {
 .p-sns .snsContainer .infoBlock ul > li a:hover {
   text-decoration: underline;
 }
-.p-sns .contactContainer {
+
+.p-contact .contactContainer {
   height: 200px;
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 160px;
 }
 @media (min-width: 641px) {
-  .p-sns .contactContainer {
+  .p-contact .contactContainer {
+    margin-bottom: 90px;
     height: 250px;
   }
 }
-.p-sns .contactContainer picture {
+.p-contact .contactContainer picture {
   display: block;
   height: 100%;
 }
-.p-sns .contactContainer picture img {
+.p-contact .contactContainer picture img {
   height: 100%;
   width: 100%;
 }
-.p-sns .contactContainer .contactContent {
+.p-contact .contactContainer .contactContent {
   display: block;
   position: absolute;
   top: 30px;
@@ -1320,23 +1430,23 @@ footer .footerCopyright .copyRight {
   transform: translateX(-50%);
 }
 @media (min-width: 641px) {
-  .p-sns .contactContainer .contactContent {
+  .p-contact .contactContainer .contactContent {
     top: 30px;
   }
 }
-.p-sns .contactContainer .contactContent .contactTitle {
+.p-contact .contactContainer .contactContent .contactTitle {
   display: block;
   color: #fff;
   font: normal normal bold 24px/32px "YuGothic";
   width: 300px;
 }
 @media (min-width: 641px) {
-  .p-sns .contactContainer .contactContent .contactTitle {
+  .p-contact .contactContainer .contactContent .contactTitle {
     width: 500px;
     font: normal normal bold 32px/54px "YuGothic";
   }
 }
-.p-sns .contactContainer .contactContent .footerRequest {
+.p-contact .contactContainer .contactContent .footerRequest {
   display: block;
   width: 200px;
   border: 1px solid #F5A623;
@@ -1348,45 +1458,293 @@ footer .footerCopyright .copyRight {
   background-color: #F5A623;
 }
 @media (min-width: 641px) {
-  .p-sns .contactContainer .contactContent .footerRequest {
+  .p-contact .contactContainer .contactContent .footerRequest {
     padding: 16px 44px;
     border-radius: 50px;
   }
 }
-.p-sns .contactContainer .contactContent .footerRequest:hover {
+.p-contact .contactContainer .contactContent .footerRequest:hover {
   background-color: #fff;
   color: #1B224C;
 }
-.p-sns .contactContainer .contactContent .footerContact {
+.p-contact .contactContainer .contactContent .footerContact {
   color: #fff;
 }
-.p-sns .contactContainer .contactContent .footerContact:hover {
+.p-contact .contactContainer .contactContent .footerContact:hover {
   text-decoration: underline;
 }
-.p-sns .contactContainer .telBlock {
+.p-contact .contactContainer .telBlock {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 21px;
+  margin-bottom: 21px;
 }
 @media (min-width: 641px) {
-  .p-sns .contactContainer .telBlock {
+  .p-contact .contactContainer .telBlock {
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
   }
 }
-.p-sns .contactContainer .telBlock .text {
+.p-contact .contactContainer .telBlock .text {
   font-weight: bold;
   margin-bottom: 10px;
+  font-size: 0.875rem;
 }
-.p-sns .contactContainer .telBlock .tel {
-  font: normal normal bold 36px/50px "YuGothic";
+@media (min-width: 980px) {
+  .p-contact .contactContainer .telBlock .text {
+    font-size: 1rem;
+  }
+}
+.p-contact .contactContainer .telBlock .tel {
+  font: normal normal bold 28px/38px "YuGothic";
   margin-bottom: 10px;
 }
-.p-sns .contactContainer .telBlock .time {
+@media (min-width: 980px) {
+  .p-contact .contactContainer .telBlock .tel {
+    font: normal normal bold 36px/50px "YuGothic";
+  }
+}
+.p-contact .contactContainer .telBlock .time {
   font-weight: 500;
+  font-size: 0.875rem;
+}
+@media (min-width: 980px) {
+  .p-contact .contactContainer .telBlock .time {
+    font-size: 1rem;
+  }
+}
+
+.p-subVisual {
+  margin-top: 80px;
+}
+.p-subVisual .subVisualContainer {
+  height: 220px;
+  width: 100%;
+  position: relative;
+}
+.p-subVisual .subVisualContainer picture {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.p-subVisual .subVisualContainer picture img {
+  height: 100%;
+  width: 100%;
+}
+.p-subVisual .subVisualContainer .subTitle {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font: normal normal bold 32px/54px "YuGothic";
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.p-subVisual .breadList {
+  width: 100%;
+  height: 50px;
+  background-color: #F8F8F8;
+}
+.p-subVisual .breadList .breadListContainer > ul {
+  display: flex;
+  align-items: center;
+}
+.p-subVisual .breadList .breadListContainer > ul li {
+  margin-right: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.p-subVisual .breadList .breadListContainer > ul li::after {
+  padding-left: 5px;
+  content: ">";
+}
+.p-subVisual .breadList .breadListContainer > ul li:last-of-type::after {
+  padding-left: unset;
+  content: "";
+}
+.p-subVisual .breadList .breadListContainer > ul li a {
+  color: #1B224C;
+  font: normal normal 500 12px/20px "YuGothic";
+}
+
+.p-planSystem {
+  padding-top: 58px;
+  padding-bottom: 90px;
+}
+.p-planSystem .planSystemContainer .systemTitle {
+  text-align: center;
+  margin-bottom: 60px;
+  font: normal normal bold 32px/54px "YuGothic";
+}
+.p-planSystem .planSystemContainer .priceSystem {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+.p-planSystem .planSystemContainer .priceSystem .membership, .p-planSystem .planSystemContainer .priceSystem .monthly {
+  width: 280px;
+  height: 90px;
+  background-color: #1B224C;
+  color: #fff;
+  font: normal normal bold 22px/35px "YuGothic";
+  text-align: center;
+  padding: 34px 0;
+  line-height: 1;
+}
+.p-planSystem .planSystemContainer .priceSystem .membership {
+  padding: 23px 0;
+}
+@media (min-width: 641px) {
+  .p-planSystem .planSystemContainer .priceSystem .membership {
+    padding: 34px 0;
+  }
+}
+.p-planSystem .planSystemContainer .priceSystem .plusIcon {
+  font: normal normal bold 48px/64px "YuGothic";
+  align-self: center;
+  margin: 0 30px;
+}
+.p-planSystem .planSystemContainer p {
+  font: normal normal 500 16px/27px "YuGothic";
+}
+
+.p-planChart {
+  margin-bottom: 62px;
+}
+.p-planChart .planChartContainer .chartTitle {
+  text-align: center;
+  font: normal normal bold 32px/54px "YuGothic";
+  margin-bottom: 106px;
+}
+.p-planChart .planChartContainer .chartContents {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+}
+
+.p-blogLists {
+  margin-top: 58px;
+  margin-bottom: 109px;
+}
+.p-blogLists .blogListsContainer .blogListsTitle {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.p-blogLists .blogListsContainer .blogList .blogPost {
+  display: flex;
+  margin-bottom: 63px;
+  flex-direction: column;
+}
+@media (min-width: 641px) {
+  .p-blogLists .blogListsContainer .blogList .blogPost {
+    flex-direction: row;
+    margin-bottom: 93px;
+  }
+}
+.p-blogLists .blogListsContainer .blogList .blogPost:last-of-type {
+  margin-bottom: unset;
+}
+.p-blogLists .blogListsContainer .blogList .blogPost picture {
+  flex: 0 0 30%;
+  position: relative;
+  /* margin-right: 5%; */
+  height: 100%;
+}
+.p-blogLists .blogListsContainer .blogList .blogPost picture img {
+  width: 70%;
+  height: 100%;
+}
+@media (min-width: 641px) {
+  .p-blogLists .blogListsContainer .blogList .blogPost picture img {
+    width: 100%;
+  }
+}
+.p-blogLists .blogListsContainer .blogList .blogPost picture .category {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: #1B224C;
+  padding: 0.5rem 1rem;
+}
+.p-blogLists .blogListsContainer .blogList .blogPost .postContent {
+  margin-top: 10px;
+  width: 95%;
+  align-self: center;
+}
+@media (min-width: 641px) {
+  .p-blogLists .blogListsContainer .blogList .blogPost .postContent {
+    margin-left: 5%;
+    margin-top: unset;
+    width: unset;
+    align-self: unset;
+  }
+}
+.p-blogLists .blogListsContainer .blogList .blogPost .postContent .postDate {
+  font: normal normal 500 14px/24px "YuGothic";
+  margin-bottom: 10px;
+}
+@media (min-width: 980px) {
+  .p-blogLists .blogListsContainer .blogList .blogPost .postContent .postDate {
+    font: normal normal 500 16px/29px "YuGothic";
+    margin-bottom: 20px;
+  }
+}
+.p-blogLists .blogListsContainer .blogList .blogPost .postContent .postTitle {
+  font: normal normal bold 22px/34px "YuGothic";
+  margin-bottom: 10px;
+}
+@media (min-width: 980px) {
+  .p-blogLists .blogListsContainer .blogList .blogPost .postContent .postTitle {
+    font: normal normal bold 26px/39px "YuGothic";
+    margin-bottom: 20px;
+  }
+}
+.p-blogLists .blogListsContainer .blogList .blogPost .postContent .postText {
+  font: normal normal 500 16px/24px YuGothic;
+}
+
+.p-newsLists {
+  margin-top: 58px;
+  margin-bottom: 40px;
+}
+.p-newsLists .newsListsContainer .newListTitle {
+  font: normal normal bold 32px/54px "YuGothic";
+  text-align: center;
+  margin-bottom: 45px;
+}
+.p-newsLists .newsListsContainer .newsList li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #F8F8F8;
+}
+@media (min-width: 641px) {
+  .p-newsLists .newsListsContainer .newsList li {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+.p-newsLists .newsListsContainer .newsList li:last-of-type {
+  border-bottom: 1px solid #F8F8F8;
+}
+.p-newsLists .newsListsContainer .newsList li .newsDate {
+  display: block;
+  width: 150px;
+  margin-bottom: 10px;
+  font: normal normal 500 16px/30px "YuGothic";
+}
+@media (min-width: 641px) {
+  .p-newsLists .newsListsContainer .newsList li .newsDate {
+    display: inline-block;
+    margin-bottom: unset;
+  }
 }
 
 /* @use "object/utility/spacing"; *//*# sourceMappingURL=style.css.map */

@@ -21,15 +21,22 @@ footer {
         .footerNav {
             margin-top: 49px;
             margin-bottom: 50px;
+            width: 100%;
+
+            @include min.breakpoint(tablet) {
+                width: 40%;
+            }
 
             @include min.breakpoint(pc) {
                 width: 60%;
+                align-self:flex-start;
             }
 
             ul {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+                
 
                 @include min.breakpoint(pc) {
                     width: 100%;
@@ -75,6 +82,7 @@ footer {
             @include min.breakpoint(pc) {
                 margin-top: 35px;
                 flex-direction: column;
+                margin-bottom: 35px;
             }
 
             picture {

@@ -1,0 +1,19 @@
+.p-planChart {
+    margin-bottom: 62px;
+    
+    .planChartContainer {
+
+        .chartTitle {
+            text-align: center;
+            font: normal normal bold 32px/54px "YuGothic";
+            margin-bottom: 106px;
+        }
+
+        .chartContents {
+            display: flex;
+            justify-content: space-between;
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+        }
+    }
+}
