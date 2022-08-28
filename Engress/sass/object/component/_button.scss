@@ -28,6 +28,10 @@
 
 .contact {
     background-color: var.$bg-main;
+    
+    @include min.breakpoint(pc) {
+        width: 137px;
+    }
 }
 
 .c-visualButton {

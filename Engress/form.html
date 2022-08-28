@@ -55,10 +55,10 @@
         <section class="p-subVisual">
             <div class="subVisualContainer">
                 <picture>
-                    <source srcset="img/news-sp.jpg" media="(max-width: 415px)">
-                    <img src="img/news.jpg" srcset="img/news@2x.jpg 2x" alt="サブ画像01">
+                    <source srcset="img/cta-sp.jpg" media="(max-width: 415px)">
+                    <img src="img/cta.jpg" srcset="img/cta@2x.jpg 2x" alt="サブ画像01">
                   </picture>
-                  <h1 class="subTitle">お知らせ</h1><!-- /.subTitle -->
+                  <h1 class="subTitle">お問い合わせ・資料請求</h1><!-- /.subTitle -->
             </div><!-- /.subVisualContainer -->
             <div class="breadList">
                 <nav class="inner breadListContainer">
@@ -69,37 +69,30 @@
                 </nav><!-- /.breadListContainer -->
             </div><!-- /.breadList -->
         </section><!-- /.p-subVisual -->
-        <section class="p-newsLists">
-            <div class="inner newsListsContainer">
-                <h2 class="newListTitle">お知らせ一覧</h2><!-- /.newListTitle -->
-                <ul class="newsList">
-                    <li>
-                        <span class="newsDate">2020-12-20</span><!-- /.newsDate -->
-                        <a href="">お知らせのタイトルテキストテキストテキストテキストテキストテキストテキスト</a>
-                    </li>
-                    <li>
-                        <span class="newsDate">2020-12-20</span><!-- /.newsDate -->
-                        <a href="">お知らせのタイトルテキストテキストテキストテキストテキストテキストテキスト</a>
-                    </li>
-                    <li>
-                        <span class="newsDate">2020-12-01</span><!-- /.newsDate -->
-                        <a href="">お知らせのタイトルテキストテキストテキストテキストテキストテキストテキスト</a>
-                    </li>
-                    <li>
-                        <span class="newsDate">2020-11-21</span><!-- /.newsDate -->
-                        <a href="">お知らせのタイトルテキストテキストテキストテキストテキストテキストテキスト</a>
-                    </li>
-                    <li>
-                        <span class="newsDate">2020–11-20</span><!-- /.newsDate -->
-                        <a href="">お知らせのタイトルテキストテキストテキストテキストテキストテキストテキスト</a>
-                    </li>
-                    <li>
-                        <span class="newsDate">2020–11-13</span><!-- /.newsDate -->
-                        <a href="">お知らせのタイトルテキストテキストテキストテキストテキストテキストテキスト</a>
-                    </li>
-                </ul><!-- /.newsList -->
-            </div><!-- /.newsListsContainer -->
-        </section><!-- /.p-newsLists -->
+        <section class="p-contactForm">
+            <div class="inner contactFormContainer">
+                <p>弊社に興味を持って頂きありがとうございます。商談やサービスのご利用、資料請求について下記のフォームよりお問い合わせください。</p>
+                <form action="">
+                    <label for="corpName">会社名</label>
+                    <input type="text" name="corpName" placeholder="Engress">
+                    <label for="name">氏名</label>
+                    <input type="text" name="name" placeholder="田中　太郎">
+                    <label for="mail">メールアドレス</label>
+                    <input type="email" placeholder="example@example.com">
+                    <label for="tel">電話番号</label>
+                    <input type="tel" name="tel" placeholder="01-2345-6789">
+                    <label for="contactType">お問い合わせの種類を選択してください<span>（資料請求の方は資料請求を選択ください）</span></label>
+                    <div class="contactTypeContainer">
+                        <input type="radio" name="contactType" value="consultation">商談のご相談
+                        <input type="radio" name="contactType" value="service">サービスに関するお問い合わせ
+                        <input type="radio" name="contactType" value="claim">資料請求
+                        <input type="radio" name="contactType" value="other">その他
+                    </div><!-- /.contactTypeContainer -->
+                    <label for="content">お問い合わせ内容</label>
+                    <textarea name="content"cols="30" rows="10" placeholder="入力して下さい"></textarea><!-- /# -->
+                </form>
+            </div><!-- /.contactFormContainer -->
+        </section><!-- /.p-contactForm -->
         <section class="c-pager">
             <div class="inner pagerContainer">
                 <ul>

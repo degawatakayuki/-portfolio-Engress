@@ -14,17 +14,17 @@
     z-index: 1000;
 
     .headerLeft {
-        margin-left: 2%;
+        margin-left: 1%;
         display: flex;
         flex-basis: 25%;
 
         @include min.breakpoint(pc) {
-            flex-basis: 48%;
+            flex-basis: 49%;
         }
 
         .headerLogo {
             flex: 0 0 136px;
-            margin-right: 2%;
+            margin-right: 1%;
             height: auto;
 
             img {
@@ -60,7 +60,7 @@
     }
 
     .headerRight {
-        margin-right: 2%;
+        margin-right: 1%;
         display: flex;
         align-items: center;
 
